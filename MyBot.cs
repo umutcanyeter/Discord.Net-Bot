@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,7 +54,7 @@ namespace chhe_BOT
                 });
             discord.ExecuteAndWait(async () =>
             {
-                await discord.Connect("MzI5OTQ2Mjk2MjI2MDIxMzc4.DDfTxQ.O86HWE_L4KS6e2ixFBqJHiibvC0", TokenType.Bot);
+                await discord.Connect("Your Token", TokenType.Bot);
             });
             //Delete messages command
             private void registerpurgecommand()
