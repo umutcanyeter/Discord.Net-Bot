@@ -46,7 +46,7 @@ namespace chhe_BOT
                 {
                     await e.Channel.SendMessage("Hello " + e.User.Mention);
                 });
-            //Reorganize delete messages command
+            //Reorganize announcement command
             commands.CreateCommand("say").Parameter("message", ParameterType.Multiple)
                 .Do(async (e) =>
                 {
@@ -69,6 +69,7 @@ namespace chhe_BOT
                         await e.Channel.DeleteMessages(messagesToDelete);
                     });
             }
+            //Announcement class
             private async Task DoAnnouncement(CommandEventArgs e)
             {
                 var channel = e.Server.FindChannels(e.Args[0], ChannelType.Text).FirstOrDefault();
@@ -82,6 +83,7 @@ namespace chhe_BOT
                     await e.Channel.SendMessage(message.ToString());
                 }
             }
+            //Announcement class
             private object ConstructMessage(CommandEventArgs e, bool firstArgsChannel)
             {
                 string message = "";
